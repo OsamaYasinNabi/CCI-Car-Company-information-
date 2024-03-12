@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "104824419504",
+    "project_id": "caroi-96a02",
+    "storage_bucket": "caroi-96a02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104824419504:android:a3f1a04f1627df745c3775",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc5T9Tse0UKToGQ8JtwPIYa6FMXWMamE8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

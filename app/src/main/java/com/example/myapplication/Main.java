@@ -2,18 +2,57 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 public class Main extends settings {
+
+    // for google
+    GoogleSignInClient gClient;
+    GoogleSignInOptions gOptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView userName = findViewById(R.id.userName);
+        Button logout = findViewById(R.id.logout);
+
+        gOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gClient = GoogleSignIn.getClient(this, gOptions);
+        GoogleSignInAccount gAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if (gAccount != null) {
+            String gName = gAccount.getDisplayName();
+            userName.setText(gName);
+        }
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gClient.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        finish();
+                        startActivity(new Intent(Main.this, LoginActivity.class));
+                    }
+                });
+            }
+        });
+
+
+        // for button bar ..............................................................................
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.bottom_home);
         bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -25,7 +64,7 @@ public class Main extends settings {
                 finish();
                 return true;
             } else if (item.getItemId() == R.id.bottom_settings) {
-                startActivity(new Intent(getApplicationContext(), settings.class));
+                startActivity(new Intent(getApplicationContext(), settings.class)); // Change 'settings' to 'Settings'
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
                 return true;
@@ -37,5 +76,8 @@ public class Main extends settings {
             }
             return false;
         });
+
+
+
     }
 }
