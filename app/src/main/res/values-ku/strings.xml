@@ -12,6 +12,7 @@
     <string name="second_fragment_label">دووەم  فرەگمێنت</string>
     <string name="next">رۆیشتن</string>
     <string name="previous">گەرانەوە</string>
+    <string name="search_in">لێرە بگەرێ....</string>
     <!-- pages -->
     <string name="settings">سێتینگ</string>
     <string name="profile_Page">پەیجی پرۆفایل</string>
@@ -23,4 +24,14 @@
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
 
     </string>
+
+
+
+
+    <string name="car_image">Car Image</string>
+    <string name="car_description_placeholder">This is a %s. It is a beautiful and powerful car.</string>
+    <string name="car_id_lamborghini">lamborghini</string>
+    <string name="car_id_cisitalia">cisitalia</string>
+    <string name="honda">honda</string>
+    <!-- Add more car IDs as needed -->
 </resources>

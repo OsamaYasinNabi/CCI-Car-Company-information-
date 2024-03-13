@@ -12,11 +12,11 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="search_in">Search in hear..</string>
     <!-- pages -->
     <string name="settings">Settings</string>
     <string name="home">Home</string>
     <string name="profile_Page">profile Page</string>
-
 
 
     <string name="lorem_ipsum">
@@ -24,4 +24,13 @@
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
 
     </string>
+
+
+
+<string name="car_image">Car Image</string>
+<string name="car_description_placeholder">This is a %s. It is a beautiful and powerful car.</string>
+<string name="car_id_lamborghini">lamborghini</string>
+<string name="car_id_cisitalia">cisitalia</string>
+<string name="honda">honda</string>
+<!-- Add more car IDs as needed -->
 </resources>
