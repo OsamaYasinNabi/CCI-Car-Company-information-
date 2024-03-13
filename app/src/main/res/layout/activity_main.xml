@@ -131,7 +131,9 @@
                 android:layout_marginBottom="17dp"
                 android:foreground="@drawable/baseline_arrow_forward_24"
                 app:layout_constraintBottom_toTopOf="@+id/row1"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/black"
+                />
 
             <TableRow
                 android:layout_width="380dp"
