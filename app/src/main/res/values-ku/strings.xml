@@ -1,18 +1,21 @@
 <resources>
     <string name="app_name">سەیارە</string>
-    <string name="changeLang" >ئەوای گۆرا دۆرا</string>
-
-
-    <string name="action_settings">Settings</string>
+    <string name="changeLang" >زمانەکە هەڵبژێرە</string>
+    <string name="Esaly_Find_Your">بەئاسانی بدۆزەوە</string>
+    <string name="Info_Car"> زانیاری سەیارەکان</string>
+    <string name="If_You_wanna_logout">داگرە بۆ چونەدەرەوە</string>
+    <string name="Log_Out">چونەدەرەوە</string>
+    <string name="click">داگرە</string>
+    <string name="action_settings">سێتینگ</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="first_fragment_label">یەکەم فرەگمێنت</string>
+    <string name="second_fragment_label">دووەم  فرەگمێنت</string>
+    <string name="next">رۆیشتن</string>
+    <string name="previous">گەرانەوە</string>
     <!-- pages -->
     <string name="settings">سێتینگ</string>
-
-    <string name="home">Home</string>
+    <string name="profile_Page">پەیجی پرۆفایل</string>
+    <string name="home">سەرەتا</string>
 
 
     <string name="lorem_ipsum">
