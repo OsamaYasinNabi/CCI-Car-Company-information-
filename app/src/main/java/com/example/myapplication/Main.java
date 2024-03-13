@@ -80,4 +80,11 @@ public class Main extends settings {
 
 
     }
+    public void onCardClick(View view) {
+        String carId = (String) view.getTag();
+        Intent intent = new Intent(this, Search.class);
+        intent.putExtra("carId", carId);
+        startActivity(intent);
+    }
+
 }

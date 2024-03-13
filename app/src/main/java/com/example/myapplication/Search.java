@@ -28,6 +28,16 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            String carId = intent.getStringExtra("carId");
+            if (carId != null && carContainer != null) {
+                filterCars(carId);
+            }
+        }
+
+
         searchView = findViewById(R.id.searchView);
         carContainer = findViewById(R.id.carContainer);
 
