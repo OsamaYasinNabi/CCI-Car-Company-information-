@@ -53,7 +53,7 @@
                             android:id="@+id/clothingName"
                             android:layout_width="wrap_content"
                             android:layout_height="49dp"
-                            android:layout_below="@+id/clothingImage"
+                            android:layout_below="@+id/BMW7SSeries"
                             android:layout_alignParentStart="true"
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="15dp"
@@ -62,7 +62,7 @@
                             android:textSize="20sp" />
 
                         <ImageView
-                            android:id="@+id/clothingImage"
+                            android:id="@+id/BMW7SSeries"
                             android:layout_width="160dp"
                             android:layout_height="110dp"
                             android:layout_alignParentTop="true"
@@ -90,7 +90,7 @@
                             android:id="@+id/elecName"
                             android:layout_width="110dp"
                             android:layout_height="50dp"
-                            android:layout_below="@+id/elecImage"
+                            android:layout_below="@+id/BMW_i8"
                             android:layout_alignParentStart="true"
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="15dp"
@@ -99,7 +99,7 @@
                             android:textSize="20sp" />
 
                         <ImageView
-                            android:id="@+id/elecImage"
+                            android:id="@+id/BMW_i8"
                             android:layout_width="160dp"
                             android:layout_height="110dp"
                             android:layout_alignParentTop="true"
@@ -135,8 +135,8 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:background="@color/grey_Container"
-                    android:tag="ford"
-                    android:onClick="onCardClick">
+                    android:onClick="onCardClick"
+                    android:tag="ford">
 
                     <ImageView
                         android:id="@+id/ford"
@@ -151,11 +151,11 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="10dp"
                     android:background="@color/grey_Container"
-                    android:tag="bmw"
-                    android:onClick="onCardClick">
+                    android:onClick="onCardClick"
+                    android:tag="bmw">
 
 
-                <ImageView
+                    <ImageView
                         android:id="@+id/bmw"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -168,8 +168,8 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="10dp"
                     android:background="@color/grey_Container"
-                    android:tag="lamborghini"
-                    android:onClick="onCardClick">
+                    android:onClick="onCardClick"
+                    android:tag="lamborghini">
 
 
                     <ImageView
@@ -185,8 +185,8 @@
                     android:layout_height="80dp"
                     android:layout_marginStart="10dp"
                     android:background="@color/grey_Container"
-                    android:tag="ferrari"
-                    android:onClick="onCardClick">
+                    android:onClick="onCardClick"
+                    android:tag="ferrari">
 
 
                     <ImageView
@@ -209,24 +209,6 @@
 
 
     </ScrollView>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/bottom_background"
-        android:elevation="2dp"
-        app:itemIconSize="30dp"
-        app:itemIconTint="@drawable/item_selector"
-        app:itemRippleColor="@android:color/transparent"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_menu" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="323dp"
@@ -250,5 +232,23 @@
         android:text="@string/Info_Car"
         android:textColor="@color/yellow"
         android:textSize="35sp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bottom_background"
+        android:elevation="2dp"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_menu" />
+
+
 
 </RelativeLayout>

@@ -29,13 +29,7 @@ public class Search extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
 
-        Intent intent = getIntent();
-        if (intent != null) {
-            String carId = intent.getStringExtra("carId");
-            if (carId != null && carContainer != null) {
-                filterCars(carId);
-            }
-        }
+        
 
 
         searchView = findViewById(R.id.searchView);
@@ -101,8 +95,9 @@ public class Search extends AppCompatActivity {
                 return true;
             }
         });
-
+// bo goryny navbar color
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
+        // bo goryny colory sarw navbary
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);

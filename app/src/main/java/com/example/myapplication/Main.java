@@ -23,9 +23,9 @@ import com.google.android.gms.tasks.Task;
 
 public class Main extends settings {
 
+
+
     // for google
-
-
     private GoogleSignInOptions gOptions;
     public static GoogleSignInClient gClient;
 
@@ -33,8 +33,9 @@ public class Main extends settings {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+// bo goryny navbar color
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
+        // bo goryny colory sarw navbary
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -43,10 +44,10 @@ public class Main extends settings {
 
 
 
-
-        gOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        gClient = GoogleSignIn.getClient(this, gOptions);
-        GoogleSignInAccount gAccount = GoogleSignIn.getLastSignedInAccount(this);
+// bo away dwbara loginy danagry pash away login buy
+//        gOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+//        gClient = GoogleSignIn.getClient(this, gOptions);
+//        GoogleSignInAccount gAccount = GoogleSignIn.getLastSignedInAccount(this);
 
 
 
@@ -64,7 +65,7 @@ public class Main extends settings {
                 finish();
                 return true;
             } else if (item.getItemId() == R.id.bottom_settings) {
-                startActivity(new Intent(getApplicationContext(), settings.class)); // Change 'settings' to 'Settings'
+                startActivity(new Intent(getApplicationContext(), settings.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
                 return true;
@@ -82,7 +83,7 @@ public class Main extends settings {
     }
     public void onCardClick(View view) {
         String carId = (String) view.getTag();
-        Intent intent = new Intent(this, Search.class);
+        Intent intent = new Intent(this, CarDetailsActivity.class);
         intent.putExtra("carId", carId);
         startActivity(intent);
     }

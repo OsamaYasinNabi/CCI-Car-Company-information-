@@ -22,8 +22,9 @@ public class profile extends settings {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile); // Make sure this is the correct layout file name
 
-
+// bo goryny navbar color
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
+        // bo goryny colory sarw navbary
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);

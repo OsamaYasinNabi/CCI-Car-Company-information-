@@ -50,16 +50,17 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+// bo goryny navbar color
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.lavender)));
-
+// bo goryny colory sarw navbary
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(ContextCompat.getColor(this, R.color.lavender)); // Use your color resource here
         }
-
+// bangkrdny  layoutakamn
         setContentView(R.layout.activity_login);
+// bo nasandny  object akanman yaxwd connect krdny idyakanman
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
@@ -67,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         forgotPassword = findViewById(R.id.forgot_password);
         googleBtn = findViewById(R.id.googleBtn);
         auth = FirebaseAuth.getInstance();
+// kate click la login dakay
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,12 +100,14 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+// kate click la signup dakay
         signupRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
             }
         });
+//kate click la forget password dakay
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -148,6 +152,7 @@ public class LoginActivity extends AppCompatActivity {
         //Inside onCreate
         gOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gClient = GoogleSignIn.getClient(this, gOptions);
+// check kednw nardny user bo main activity
         GoogleSignInAccount gAccount = GoogleSignIn.getLastSignedInAccount(this);
         if (gAccount != null){
             finish();
@@ -172,6 +177,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+// kate click la btny google dakay acountakant pshan bda w zanyary naw acountakant bo databse firebase bnerytn
         googleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

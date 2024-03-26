@@ -25,8 +25,9 @@ public class settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+// bo goryny navbar color
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
+        // bo goryny colory sarw navbary
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
@@ -39,10 +40,10 @@ public class settings extends AppCompatActivity {
 
         setContentView(R.layout.activity_settings);
 
-        //for translate
+        //This line sets the title of the action bar to the app's name.
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
-
+//This block of code initializes a button (changeLang) and sets a click listener on it to show a dialog for changing the language.
         Button changeLang = findViewById(R.id.changeMyLang);
         changeLang.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +76,7 @@ public class settings extends AppCompatActivity {
         });
 
     }
-
+//This method displays a dialog that allows the user to choose a different language for the app.
     private void showChangeLanguageDialog() {
         final String[] listItems = {"Kurdish", "English"};
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(this);
@@ -97,7 +98,7 @@ public class settings extends AppCompatActivity {
         AlertDialog mDialog = mBuilder.create();
         mDialog.show();
     }
-
+//This method sets the app's locale based on the selected language.
     private void setLocale(String lang) {
         Locale locale = new Locale(lang);
         Locale.setDefault(locale);
@@ -109,7 +110,7 @@ public class settings extends AppCompatActivity {
         editor.putString("MY_lang", lang);
         editor.apply();
     }
-
+//This method loads the user's preferred language from SharedPreferences and sets the app's locale accordingly.
     public void loadLocale() {
         SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
         String language = prefs.getString("MY_lang", "");

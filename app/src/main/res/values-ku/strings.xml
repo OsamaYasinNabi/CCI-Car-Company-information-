@@ -29,9 +29,5 @@
 
 
     <string name="car_image">Car Image</string>
-    <string name="car_description_placeholder">This is a %s. It is a beautiful and powerful car.</string>
-    <string name="car_id_lamborghini">lamborghini</string>
-    <string name="car_id_cisitalia">cisitalia</string>
-    <string name="honda">honda</string>
-    <!-- Add more car IDs as needed -->
+
 </resources>

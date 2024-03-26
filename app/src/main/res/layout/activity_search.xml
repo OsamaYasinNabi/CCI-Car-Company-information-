@@ -6,21 +6,25 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".Search">
+
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@drawable/bottom_background"
+        android:layout_margin="10dp"
+        android:background="@drawable/searchcolor"
         android:iconifiedByDefault="false"
         android:queryHint="@string/search_in"
-        android:layout_margin="10dp"/>
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
         android:layout_below="@id/searchView"
-        android:layout_above="@id/bottomNavigation">
+        android:layout_marginBottom="30dp">
 
         <LinearLayout
             android:id="@+id/carContainer"
@@ -79,327 +83,298 @@
             </androidx.cardview.widget.CardView>
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_Container"
+                android:tag="morris">
 
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
+                <ImageView
+                    android:id="@+id/morris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="morris">
+                    android:src="@drawable/morris" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/morris"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        android:src="@drawable/morris" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="tesla">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/tesla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="tesla">
+                    app:srcCompat="@drawable/tesla" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/tesla"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/tesla" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="elfin">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="260dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/elfin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="elfin">
-
-                    <ImageView
-                        android:id="@+id/elfin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/elfin" />
-                </androidx.cardview.widget.CardView>
+                    app:srcCompat="@drawable/elfin" />
+            </androidx.cardview.widget.CardView>
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_Container"
+                android:tag="ford">
 
-
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
+                <ImageView
+                    android:id="@+id/ford"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="ford">
+                    android:src="@drawable/ford" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/ford"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        android:src="@drawable/ford" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="bmw">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/bmw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="bmw">
+                    app:srcCompat="@drawable/bmw" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/bmw"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/bmw" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="ferrari">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="260dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/ferrari"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="ferrari">
-
-                    <ImageView
-                        android:id="@+id/ferrari"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/ferrari" />
-                </androidx.cardview.widget.CardView>
+                    app:srcCompat="@drawable/ferrari" />
+            </androidx.cardview.widget.CardView>
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_Container"
+                android:tag="bmw_m">
 
-
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
+                <ImageView
+                    android:id="@+id/bmw_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="bmw_m">
+                    android:src="@drawable/bmw_m" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/bmw_m"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        android:src="@drawable/bmw_m" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="dodge">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/dodge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="dodge">
+                    app:srcCompat="@drawable/dodge" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/dodge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/dodge" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="mazda">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="260dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/mazda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="mazda">
-
-                    <ImageView
-                        android:id="@+id/mazda"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/mazda" />
-                </androidx.cardview.widget.CardView>
+                    app:srcCompat="@drawable/mazda" />
+            </androidx.cardview.widget.CardView>
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_Container"
+                android:tag="hyundai">
 
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
+                <ImageView
+                    android:id="@+id/hyundai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="hyundai">
+                    android:src="@drawable/hyundai" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/hyundai"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        android:src="@drawable/hyundai" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="marcos">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/marcos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="marcos">
+                    app:srcCompat="@drawable/marcos" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/marcos"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/marcos" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="kaiser">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="260dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/kaiser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="kaiser">
-
-                    <ImageView
-                        android:id="@+id/kaiser"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/kaiser" />
-                </androidx.cardview.widget.CardView>
+                    app:srcCompat="@drawable/kaiser" />
+            </androidx.cardview.widget.CardView>
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_Container"
+                android:tag="shacman">
 
-
-
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
+                <ImageView
+                    android:id="@+id/shacman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="shacman">
+                    android:src="@drawable/shacman" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/shacman"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        android:src="@drawable/shacman" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="porsche">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/porsche"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="porsche">
+                    app:srcCompat="@drawable/porsche" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/porsche"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/porsche" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="subaru">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="260dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/subaru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="subaru">
-
-                    <ImageView
-                        android:id="@+id/subaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/subaru" />
-                </androidx.cardview.widget.CardView>
+                    app:srcCompat="@drawable/subaru" />
+            </androidx.cardview.widget.CardView>
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/grey_Container"
+                android:tag="innocenti">
 
-
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
+                <ImageView
+                    android:id="@+id/innocenti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="innocenti">
+                    android:src="@drawable/innocenti" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/innocenti"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        android:src="@drawable/innocenti" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="cadillac">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="140dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/cadillac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="cadillac">
+                    app:srcCompat="@drawable/cadillac" />
+            </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/cadillac"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/cadillac" />
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="-100dp"
+                android:background="@color/grey_Container"
+                android:tag="duesenberg">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="260dp"
-                    android:layout_marginTop="-100dp"
+                <ImageView
+                    android:id="@+id/duesenberg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/grey_Container"
-                    android:tag="duesenberg">
-
-                    <ImageView
-                        android:id="@+id/duesenberg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/duesenberg" />
-                </androidx.cardview.widget.CardView>
-
+                    app:srcCompat="@drawable/duesenberg" />
+            </androidx.cardview.widget.CardView>
 
 
         </LinearLayout>
