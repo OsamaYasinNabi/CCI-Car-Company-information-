@@ -15,7 +15,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         app:cardCornerRadius="30dp"
-        app:cardElevation="20dp">
+        app:cardElevation="20dp"><!-- is used to set the elevation of a Material Design card in Android.
+        Elevation determines the z-order of the view in the UI stack and can create a shadow effect to
+          indicate elevation above the content. -->
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,7 +96,8 @@
                 android:layout_marginEnd="40dp"
                 android:padding="8dp"
                 android:text="Sign in with Google"
-                app:isDarkTheme="true" />
+                app:isDarkTheme="true" />   <!-- app:isDarkTheme="true" is a custom attribute that is likely used in a custom view or component.
+                 It suggests that the view or component can be set to a dark theme. -->
 
             <TextView
                 android:id="@+id/signUpRedirectText"
