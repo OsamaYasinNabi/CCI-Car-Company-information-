@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Car Company Information</string>
     <string name="changeLang">Select Language</string>
-    <string name="Esaly_Find_Your">Esaly Find </string>
+    <string name="Easy_Find_Your">Easy Find </string>
     <string name="Info_Car"> Information CC</string>
     <string name="If_You_wanna_logout">If You wanna logout click -></string>
     <string name="Log_Out">Log Out</string>

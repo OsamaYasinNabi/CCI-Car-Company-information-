@@ -1,223 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/black"
+    android:orientation="vertical"
     tools:context=".Main">
 
-    <!-- for button .............................................................................-->
-
-    <ScrollView
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Main">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="150dp">
-
-            <LinearLayout
-                android:id="@+id/row1"
-                android:layout_width="404dp"
-                android:layout_height="0dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="208dp"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/clothingCard"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@color/grey_Container"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="173dp"
-                        android:layout_height="203dp"
-                        android:background="@color/grey_Container">
-
-                        <TextView
-                            android:id="@+id/clothingName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="49dp"
-                            android:layout_below="@+id/BMW7SSeries"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="15dp"
-                            android:text="BMW 7 Series"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-
-                        <ImageView
-                            android:id="@+id/BMW7SSeries"
-                            android:layout_width="160dp"
-                            android:layout_height="110dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:src="@drawable/bmw_7_series" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/grey_Container">
-
-                        <TextView
-                            android:id="@+id/elecName"
-                            android:layout_width="110dp"
-                            android:layout_height="50dp"
-                            android:layout_below="@+id/BMW_i8"
-                            android:layout_alignParentStart="true"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="15dp"
-                            android:text="BMW_i8"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
-
-                        <ImageView
-                            android:id="@+id/BMW_i8"
-                            android:layout_width="160dp"
-                            android:layout_height="110dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentEnd="true"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="2dp"
-                            android:src="@drawable/bmw_i8" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="100dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginBottom="20dp"
-                android:text="BMW Cars"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/row1"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TableRow
-                android:layout_width="380dp"
-                android:layout_height="95dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@color/grey_Container"
-                    android:onClick="onCardClick"
-                    android:tag="ford">
-
-                    <ImageView
-                        android:id="@+id/ford"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        android:src="@drawable/ford" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@color/grey_Container"
-                    android:onClick="onCardClick"
-                    android:tag="bmw">
-
-
-                    <ImageView
-                        android:id="@+id/bmw"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/bmw" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@color/grey_Container"
-                    android:onClick="onCardClick"
-                    android:tag="lamborghini">
-
-
-                    <ImageView
-                        android:id="@+id/lamborghini"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/lamborghini" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@color/grey_Container"
-                    android:onClick="onCardClick"
-                    android:tag="ferrari">
-
-
-                    <ImageView
-                        android:id="@+id/ferrari"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/grey_Container"
-                        app:srcCompat="@drawable/ferrari" />
-                </androidx.cardview.widget.CardView>
-            </TableRow>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-    </ScrollView>
     <TextView
         android:id="@+id/textView"
-        android:layout_width="323dp"
-        android:layout_height="81dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:text="@string/Esaly_Find_Your"
+        android:text="@string/Easy_Find_Your"
         android:textColor="@color/white"
         android:textSize="45sp" />
 
@@ -225,13 +22,174 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="-22dp"
         android:text="@string/Info_Car"
         android:textColor="@color/yellow"
         android:textSize="35sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/grey_Container"
+            android:onClick="onCardClick"
+            android:tag="ford">
+
+            <ImageView
+                android:id="@+id/ford"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_Container"
+                android:src="@drawable/ford" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/grey_Container"
+            android:onClick="onCardClick"
+            android:tag="bmw">
+
+            <ImageView
+                android:id="@+id/bmw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_Container"
+                app:srcCompat="@drawable/bmw" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/grey_Container"
+            android:onClick="onCardClick"
+            android:tag="lamborghini">
+
+            <ImageView
+                android:id="@+id/lamborghini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_Container"
+                app:srcCompat="@drawable/lamborghini" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/grey_Container"
+            android:onClick="onCardClick"
+            android:tag="ferrari">
+
+            <ImageView
+                android:id="@+id/ferrari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_Container"
+                app:srcCompat="@drawable/ferrari" />
+        </androidx.cardview.widget.CardView>
+    </TableRow>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="BMW Cars"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/clothingCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@color/grey_Container"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="173dp"
+                android:layout_height="203dp"
+                android:background="@color/grey_Container">
+
+                <TextView
+                    android:id="@+id/clothingName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_below="@+id/BMW7SSeries"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="BMW 7 Series"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/BMW7SSeries"
+                    android:layout_width="160dp"
+                    android:layout_height="110dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/bmw_7_series" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey_Container">
+
+                <TextView
+                    android:id="@+id/elecName"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/BMW_i8"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="BMW_i8"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/BMW_i8"
+                    android:layout_width="160dp"
+                    android:layout_height="110dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:src="@drawable/bmw_i8" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -239,8 +197,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/bottom_background"
         android:elevation="2dp"
         app:itemIconSize="30dp"
@@ -249,6 +208,4 @@
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_menu" />
 
-
-
-</RelativeLayout>
+</LinearLayout>
