@@ -5,12 +5,18 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import android.content.Intent;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class profile extends AppCompatActivity {
-    private EditText editEmail, editPassword;
+
+public class ProfileActivity extends AppCompatActivity {
+    private EditText editPassword;
+    private TextView editEmail;
+
     private Button changeButton, logoutButton;
     private FirebaseAuth auth;
 
@@ -48,6 +54,31 @@ public class profile extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_profile);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.bottom_home) {
+                startActivity(new Intent(getApplicationContext(), Main.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.bottom_search) {
+                startActivity(new Intent(getApplicationContext(), Search.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            } else if (item.getItemId() == R.id.bottom_settings) {
+                startActivity(new Intent(getApplicationContext(), settings.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                finish();
+                return true;
+            }
+            return false;
+        });
+
+
     }
 
     // Method to change password
@@ -73,4 +104,10 @@ public class profile extends AppCompatActivity {
             Toast.makeText(ProfileActivity.this, "User not authenticated", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+
+
+
+
 }
