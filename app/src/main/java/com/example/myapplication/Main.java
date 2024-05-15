@@ -26,7 +26,7 @@ public class Main extends settings {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-// bo goryny navbar color
+       // bo goryny navbar color
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.black)));
         // bo goryny colory sarw navbary
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

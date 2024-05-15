@@ -146,14 +146,109 @@ public class CarDetailsActivity extends AppCompatActivity {
         // Add image resource IDs for the selected car
         switch (carId) {
             case "lamborghini":
-                carImages.add(R.drawable.lamborghini);
-                carImages.add(R.drawable.lamborghini);
-                // Add more images for Lamborghini
+                carImages.add(R.drawable.lamborghini1);
+                carImages.add(R.drawable.lamborghini2);
+                // Add more images for lamborghini
                 break;
             case "cisitalia":
-                carImages.add(R.drawable.lamborghini);
-                carImages.add(R.drawable.lamborghini);
-                // Add more images for Cisitalia
+                carImages.add(R.drawable.elfin1);
+                carImages.add(R.drawable.elfin2);
+                // Add more images for cisitalia
+                break;
+            case "honda":
+                carImages.add(R.drawable.honda1);
+                carImages.add(R.drawable.honda2);
+                // Add more images for honda
+                break;
+            case "morris":
+                carImages.add(R.drawable.morris1);
+                carImages.add(R.drawable.morris2);
+                // Add more images for morris
+                break;
+            case "tesla":
+                carImages.add(R.drawable.tesla1);
+                carImages.add(R.drawable.tesla2);
+                // Add more images for tesla
+                break;
+            case "elfin":
+                carImages.add(R.drawable.elfin1);
+                carImages.add(R.drawable.elfin2);
+                // Add more images for elfin
+                break;
+            case "ford":
+                carImages.add(R.drawable.ford1);
+                carImages.add(R.drawable.ford2);
+                // Add more images for ford
+                break;
+            case "bmw":
+                carImages.add(R.drawable.bmw1);
+                carImages.add(R.drawable.bmw2);
+                // Add more images for bmw
+                break;
+            case "ferrari":
+                carImages.add(R.drawable.ferrari1);
+                carImages.add(R.drawable.ferrari2);
+                // Add more images for ferrari
+                break;
+            case "bmw_m":
+                carImages.add(R.drawable.bmw1);
+                carImages.add(R.drawable.bmw2);
+                // Add more images for bmw_m
+                break;
+            case "dodge":
+                carImages.add(R.drawable.dodge1);
+                carImages.add(R.drawable.dodge2);
+                // Add more images for dodge
+                break;
+            case "mazda":
+                carImages.add(R.drawable.mazda1);
+                carImages.add(R.drawable.mazda2);
+                // Add more images for mazda
+                break;
+            case "hyundai":
+                carImages.add(R.drawable.hyundai1);
+                carImages.add(R.drawable.hyundai2);
+                // Add more images for hyundai
+                break;
+            case "marcos":
+                carImages.add(R.drawable.marcos1);
+                carImages.add(R.drawable.marcos1);
+                // Add more images for marcos
+                break;
+            case "kaiser":
+                carImages.add(R.drawable.marcos1);
+                carImages.add(R.drawable.shacman2);
+                // Add more images for kaiser
+                break;
+            case "shacman":
+                carImages.add(R.drawable.shacman1);
+                carImages.add(R.drawable.shacman2);
+                // Add more images for shacman
+                break;
+            case "porsche":
+                carImages.add(R.drawable.porsche1);
+                carImages.add(R.drawable.porsche2);
+                // Add more images for porsche
+                break;
+            case "subaru":
+                carImages.add(R.drawable.subaru1);
+                carImages.add(R.drawable.subaru2);
+                // Add more images for subaru
+                break;
+            case "innocenti":
+                carImages.add(R.drawable.innocenti1);
+                carImages.add(R.drawable.innocenti2);
+                // Add more images for innocenti
+                break;
+            case "cadillac":
+                carImages.add(R.drawable.cadillac1);
+                carImages.add(R.drawable.cadilac2);
+                // Add more images for cadillac
+                break;
+            case "duesenberg":
+                carImages.add(R.drawable.duesenberg1);
+                carImages.add(R.drawable.duesenberg2);
+                // Add more images for duesenberg
                 break;
             // Add cases for other cars...
         }
